@@ -1,0 +1,75 @@
+.login-wrapper {
+  width: min(100%, 390px);
+  padding: 34px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: rgba(255, 254, 250, 0.92);
+  box-shadow: 0 22px 50px rgba(42, 47, 41, 0.1);
+  text-align: left;
+}
+
+.login-heading {
+  margin-bottom: 28px;
+}
+
+.login-kicker {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.login-heading h1 {
+  margin-bottom: 10px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 5vw, 2.7rem);
+  line-height: 1;
+}
+
+.login-heading p {
+  color: var(--muted-text);
+  font-size: 0.94rem;
+  line-height: 1.6;
+}
+
+.login-form {
+  margin: 0;
+}
+
+.login-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.login-fields label {
+  margin-top: 8px;
+  color: var(--text);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.login-fields input {
+  margin-bottom: 4px;
+}
+
+.login-submit {
+  width: 100%;
+  margin-top: 18px;
+}
+
+.login-submit:disabled {
+  cursor: not-allowed;
+  opacity: 0.58;
+}
+
+.login-error {
+  margin-top: 14px;
+  color: var(--danger);
+  font-size: 0.84rem;
+  line-height: 1.5;
+}

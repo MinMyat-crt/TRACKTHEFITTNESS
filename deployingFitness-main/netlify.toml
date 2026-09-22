@@ -1,0 +1,18 @@
+[build]
+  command = "cd api && npm install --legacy-peer-deps && npx prisma generate && cd .. && npm run build"
+  functions = "api/netlify/functions"
+  publish = "build"
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+# SPA fallback
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Optional: uncomment to force npm to ignore peer deps during Netlify installs
+# [build.environment]
+#   NPM_FLAGS = "--legacy-peer-deps"

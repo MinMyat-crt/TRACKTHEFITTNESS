@@ -1,0 +1,111 @@
+.advertisement-container {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+  gap: clamp(32px, 7vw, 104px);
+  align-items: center;
+  width: min(1180px, 100%);
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 56px 36px;
+}
+
+/* Ensure login container is clickable above other UI elements */
+.advertisement-container .login-wrapper {
+  position: relative;
+  z-index: 10000;
+  pointer-events: auto;
+}
+
+.advertisement-title {
+  max-width: 620px;
+  margin: 10px 0 18px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(3.5rem, 8vw, 7.5rem);
+  line-height: 0.9;
+  letter-spacing: -0.055em;
+}
+
+.advertisement-kicker {
+  color: var(--accent);
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.advertisement-description {
+  max-width: 460px;
+  margin-bottom: 38px;
+  color: var(--muted-text);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.advertisement-section {
+  display: flex;
+  gap: 14px;
+}
+
+.advertisement-item {
+  width: min(190px, 42%);
+  color: var(--muted-text);
+  font-size: 0.8rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.advertisement-image {
+  width: 100%;
+  height: 230px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.advertisement-login {
+  display: flex;
+  justify-content: center;
+}
+
+/* utility classes to quickly resize from JSX */
+.ad-size-small {
+  --ad-img-w: 200px;
+  --ad-img-h: 140px;
+}
+.ad-size-medium {
+  --ad-img-w: 300px;
+  --ad-img-h: 200px;
+}
+.ad-size-large {
+  --ad-img-w: 420px;
+  --ad-img-h: 280px;
+}
+
+@media (max-width: 760px) {
+  .advertisement-container {
+    grid-template-columns: 1fr;
+    align-items: start;
+    min-height: auto;
+    padding: 42px 20px;
+  }
+
+  .advertisement-title {
+    font-size: clamp(3.2rem, 16vw, 5.5rem);
+  }
+
+  .advertisement-description {
+    margin-bottom: 26px;
+  }
+
+  .advertisement-section {
+    margin-bottom: 8px;
+  }
+
+  .advertisement-item {
+    width: 50%;
+  }
+
+  .advertisement-image {
+    height: 170px;
+  }
+}
